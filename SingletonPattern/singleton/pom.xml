@@ -58,7 +58,7 @@
           <configuration>
             <archive>
               <manifest>
-                <mainClass>lucasgranger.TestSingleton</mainClass> <!-- nom complet de ta classe -->
+                <mainClass>com.lucasgranger.TestSingleton</mainClass> <!-- nom complet de ta classe -->
               </manifest>
             </archive>
           </configuration>

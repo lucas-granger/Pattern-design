@@ -1,4 +1,4 @@
-package lucasgranger;
+package com.lucasgranger;
 
 public final class Singleton {
     private static Singleton instance;
