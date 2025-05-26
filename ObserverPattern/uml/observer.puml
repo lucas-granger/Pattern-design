@@ -1,0 +1,28 @@
+@startuml ObserverPattern
+
+interface IObserver {
+    +update(message: String): void
+}
+
+interface IEmitter {
+    +attach(o: IObserver): void
+    +detach(o: IObserver): void
+    +notifyObservers(message: String): void
+}
+
+class Observer implements IObserver {
+    -name: String
+    +Observer(name: String)
+    +update(message: String): void
+}
+
+class Emitter implements IEmitter {
+    -observers: List<IObserver>
+    +attach(o: IObserver): void
+    +detach(o: IObserver): void
+    +notifyObservers(message: String): void
+}
+
+Emitter --> IObserver : notifies
+
+@enduml
