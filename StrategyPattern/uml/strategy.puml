@@ -1,0 +1,23 @@
+@startuml StrategyPattern
+
+interface IStrategy {
+    +execute(): void
+}
+
+class Strategy1 implements IStrategy {
+    +execute(): void
+}
+
+class Strategy2 implements IStrategy {
+    +execute(): void
+}
+
+class Context {
+    -strategy: IStrategy
+    +setStrategy(strategy: IStrategy): void
+    +executeStrategy(): void
+}
+
+Context --> IStrategy : uses
+
+@enduml
