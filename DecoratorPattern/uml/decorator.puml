@@ -1,0 +1,29 @@
+@startuml DecoratorPattern
+
+interface ICoffee {
+    +getDescription(): String
+    +getCost(): double
+}
+
+class Coffee implements ICoffee {
+    +getDescription(): String
+    +getCost(): double
+}
+
+abstract class CoffeeDecorator implements ICoffee {
+    -coffee: ICoffee
+    +CoffeeDecorator(coffee: ICoffee)
+    +getCoffee(): ICoffee
+}
+
+class MilkDecorator extends CoffeeDecorator {
+    +getDescription(): String
+    +getCost(): double
+}
+
+class ChocolateDecorator extends CoffeeDecorator {
+    +getDescription(): String
+    +getCost(): double
+}
+
+@enduml
